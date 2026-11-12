@@ -1,0 +1,63 @@
+add_newline = false
+command_timeout = 500
+format = '$directory$git_branch$git_status$kubernetes$nodejs$python$golang$rust$status$cmd_duration$line_break$character'
+
+[directory]
+format = '[$path]($style)[$read_only]($read_only_style) '
+style = 'bold white'
+truncation_length = 3
+read_only = ' ro'
+
+[git_branch]
+format = '[$branch]($style) '
+style = 'bright-black'
+
+[git_status]
+format = '([$all_status$ahead_behind]($style) )'
+style = 'yellow'
+conflicted = '='
+ahead = '+'
+behind = '-'
+diverged = '+-'
+untracked = '?'
+stashed = '$'
+modified = '*'
+staged = '+'
+renamed = '~'
+deleted = '-'
+
+[kubernetes]
+disabled = false
+format = '[$context(/$namespace)]($style) '
+style = 'white'
+
+[nodejs]
+format = '[node $version]($style) '
+style = 'bright-black'
+
+[python]
+format = '[py $version( \($virtualenv\))]($style) '
+style = 'bright-black'
+
+[golang]
+format = '[go $version]($style) '
+style = 'bright-black'
+
+[rust]
+format = '[rust $version]($style) '
+style = 'bright-black'
+
+[status]
+disabled = false
+format = '[exit:$status]($style) '
+style = 'red'
+
+[cmd_duration]
+min_time = 2000
+format = '[$duration]($style) '
+style = 'bright-black'
+
+[character]
+success_symbol = '[>](green)'
+error_symbol = '[>](red)'
+vimcmd_symbol = '[<](green)'
