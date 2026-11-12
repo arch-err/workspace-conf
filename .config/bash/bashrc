@@ -4,6 +4,10 @@ BASH_CONF_DIR="$(cd -- "$(dirname -- "$(readlink -f -- "${BASH_SOURCE[0]}")")" &
 export EDITOR="${EDITOR:-nvim}"
 export VISUAL="${VISUAL:-$EDITOR}"
 
+if [[ -r $HOME/.local/share/creds ]]; then
+    source "$HOME/.local/share/creds"
+fi
+
 # Readline
 export INPUTRC="$BASH_CONF_DIR/inputrc"
 bind -f "$INPUTRC"
