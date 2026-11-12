@@ -1,63 +1,46 @@
 add_newline = false
-command_timeout = 500
-format = '$directory$git_branch$git_status$kubernetes$nodejs$python$golang$rust$status$cmd_duration$line_break$character'
-
-[directory]
-format = '[$path]($style)[$read_only]($read_only_style) '
-style = 'bold white'
-truncation_length = 3
-read_only = ' ro'
-
-[git_branch]
-format = '[$branch]($style) '
-style = 'bright-black'
-
-[git_status]
-format = '([$all_status$ahead_behind]($style) )'
-style = 'yellow'
-conflicted = '='
-ahead = '+'
-behind = '-'
-diverged = '+-'
-untracked = '?'
-stashed = '$'
-modified = '*'
-staged = '+'
-renamed = '~'
-deleted = '-'
-
-[kubernetes]
-disabled = false
-format = '[$context(/$namespace)]($style) '
-style = 'white'
-
-[nodejs]
-format = '[node $version]($style) '
-style = 'bright-black'
-
-[python]
-format = '[py $version( \($virtualenv\))]($style) '
-style = 'bright-black'
-
-[golang]
-format = '[go $version]($style) '
-style = 'bright-black'
-
-[rust]
-format = '[rust $version]($style) '
-style = 'bright-black'
-
-[status]
-disabled = false
-format = '[exit:$status]($style) '
-style = 'red'
-
-[cmd_duration]
-min_time = 2000
-format = '[$duration]($style) '
-style = 'bright-black'
+command_timeout = 1000
+format = "$directory$git_branch$git_status$nix_shell$cmd_duration$character"
+palette = "arch-err"
+scan_timeout = 10
 
 [character]
-success_symbol = '[>](green)'
-error_symbol = '[>](red)'
-vimcmd_symbol = '[<](green)'
+error_symbol = "[❯](bold red)"
+success_symbol = "[❯](bold green)"
+vimcmd_symbol = "[❮](bold green)"
+
+[cmd_duration]
+format = "[󱎫 $duration]($style) "
+min_time = 2000
+show_milliseconds = false
+style = "muted"
+
+[directory]
+format = "[$path]($style)[$read_only]($read_only_style) "
+read_only = " 󰌾"
+read_only_style = "red"
+style = "bold blue"
+truncate_to_repo = false
+truncation_length = 4
+
+[git_branch]
+format = "[$symbol$branch]($style) "
+style = "purple"
+symbol = " "
+
+[git_status]
+format = "([$all_status$ahead_behind]($style) )"
+style = "red"
+
+[nix_shell]
+format = "[$symbol$name]($style) "
+style = "bold cyan"
+symbol = " "
+
+[palettes.arch-err]
+blue = "#005f87"
+cyan = "#008080"
+green = "#5f875f"
+muted = "#909495"
+purple = "#9a999d"
+red = "#c83232"

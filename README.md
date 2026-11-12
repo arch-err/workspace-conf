@@ -18,6 +18,7 @@ ln -s "$PWD/.config/starship.toml" ~/.config/starship.toml
 
 After pulling changes, open a new shell. In tmux, Ctrl-B then Shift-R reloads
 its configuration. Starship is used when installed in the toolbox image.
+Its single-line prompt uses Nerd Font symbols.
 
 Ctrl-R searches history through fzf. Git, Kubernetes, Helm, and Podman
 abbreviations expand on Space or Enter; Docker stays in `abbr/unused/`.
