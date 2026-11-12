@@ -4,19 +4,16 @@ Bash, tmux, Neovim, Readline, and Starship configuration for toolbox.
 Bash is based on [bash-conf](https://github.com/arch-err/bash-conf), with its
 modules under `.config/bash/` and a `~/.bashrc` shim.
 
-Clone into your persistent home and symlink the files you want to use.
-Move existing configs aside first. For example, from this checkout:
+Clone into your persistent home, then run:
 
 ```sh
-ln -s "$PWD/.bashrc" ~/.bashrc
-ln -s "$PWD/.tmux.conf" ~/.tmux.conf
-mkdir -p ~/.config
-ln -s "$PWD/.config/bash" ~/.config/bash
-ln -s "$PWD/.config/tmux" ~/.config/tmux
-ln -s "$PWD/.config/git" ~/.config/git
-ln -s "$PWD/.config/nvim" ~/.config/nvim
-ln -s "$PWD/.config/starship.toml" ~/.config/starship.toml
+./install.sh
+exec bash
 ```
+
+The installer links the configs and backs up existing files under
+`~/.local/state/workspace-conf/backup.*`. Rerunning it preserves correct links.
+Keep the clone in place; the links point into it.
 
 After pulling changes, open a new shell. In tmux, Ctrl-B then r reloads
 its configuration. Starship is used when installed in the toolbox image.
