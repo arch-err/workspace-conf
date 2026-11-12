@@ -12,13 +12,21 @@ ln -s "$PWD/.bashrc" ~/.bashrc
 ln -s "$PWD/.tmux.conf" ~/.tmux.conf
 mkdir -p ~/.config
 ln -s "$PWD/.config/bash" ~/.config/bash
+ln -s "$PWD/.config/tmux" ~/.config/tmux
+ln -s "$PWD/.config/git" ~/.config/git
 ln -s "$PWD/.config/nvim" ~/.config/nvim
 ln -s "$PWD/.config/starship.toml" ~/.config/starship.toml
 ```
 
-After pulling changes, open a new shell. In tmux, Ctrl-B then Shift-R reloads
+After pulling changes, open a new shell. In tmux, Ctrl-B then r reloads
 its configuration. Starship is used when installed in the toolbox image.
 Its single-line prompt uses Nerd Font symbols.
+
+tmux and Neovim follow the host configuration. Resurrect and Continuum are
+included locally, with their licenses. Clipboard copying uses Wayland when
+available and OSC 52 remotely; the client terminal must support it. Terminal
+paste shortcuts work independently of OSC 52 clipboard-read support.
+Git uses delta for paged diffs and interactive patch highlighting.
 
 Ctrl-R searches history through fzf. Git, Kubernetes, Helm, and Podman
 abbreviations expand on Space or Enter; Docker stays in `abbr/unused/`.
