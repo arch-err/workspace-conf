@@ -1,0 +1,60 @@
+# Core
+abbrev-alias k="kubectl"
+abbrev-alias kx="kubectx"
+abbrev-alias kn="kubens"
+
+# Get
+abbrev-alias kg="kubectl get"
+abbrev-alias kgp="kubectl get pods"
+abbrev-alias kgpa="kubectl get pods -A"
+abbrev-alias kgs="kubectl get svc"
+abbrev-alias kgd="kubectl get deploy"
+abbrev-alias kgn="kubectl get nodes"
+abbrev-alias kgns="kubectl get namespaces"
+abbrev-alias kgi="kubectl get ingress"
+abbrev-alias kgcm="kubectl get configmap"
+abbrev-alias kgsec="kubectl get secret"
+abbrev-alias kgj="kubectl get jobs"
+abbrev-alias kgcj="kubectl get cronjobs"
+abbrev-alias kgpv="kubectl get pv"
+abbrev-alias kgpvc="kubectl get pvc"
+
+# Describe
+abbrev-alias kd="kubectl describe"
+abbrev-alias kdp="kubectl describe pod"
+abbrev-alias kds="kubectl describe svc"
+abbrev-alias kdd="kubectl describe deploy"
+abbrev-alias kdn="kubectl describe node"
+
+# Logs
+abbrev-alias kl="kubectl logs"
+abbrev-alias klf="kubectl logs -f"
+
+# Apply / Delete
+abbrev-alias ka="kubectl apply -f"
+abbrev-alias kak="kubectl apply -k"
+abbrev-alias kdel="kubectl delete"
+abbrev-alias kdelf="kubectl delete -f"
+
+# Exec / Port-forward
+abbrev-alias kex="kubectl exec -it"
+abbrev-alias kpf="kubectl port-forward"
+
+# Edit / Scale
+abbrev-alias ke="kubectl edit"
+abbrev-alias ksc="kubectl scale"
+
+# Context / Config
+abbrev-alias kcg="kubectl config get-contexts"
+abbrev-alias kcu="kubectl config use-context"
+abbrev-alias kcv="kubectl config view"
+
+# Rollout
+abbrev-alias kro="kubectl rollout"
+abbrev-alias kros="kubectl rollout status"
+abbrev-alias kror="kubectl rollout restart"
+
+# Top
+abbrev-alias kt="kubectl top"
+abbrev-alias ktp="kubectl top pods"
+abbrev-alias ktn="kubectl top nodes"

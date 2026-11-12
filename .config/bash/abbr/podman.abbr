@@ -1,0 +1,53 @@
+# Core
+abbrev-alias p="podman"
+abbrev-alias pc="podman compose"
+
+# Containers
+abbrev-alias pps="podman ps"
+abbrev-alias ppsa="podman ps -a"
+abbrev-alias pex="podman exec -it"
+abbrev-alias pl="podman logs"
+abbrev-alias plf="podman logs -f"
+abbrev-alias pstart="podman start"
+abbrev-alias pstop="podman stop"
+abbrev-alias prm="podman rm"
+abbrev-alias prmf="podman rm -f"
+
+# Images
+abbrev-alias pi="podman images"
+abbrev-alias prmi="podman rmi"
+abbrev-alias pb="podman build"
+abbrev-alias pbt="podman build -t"
+abbrev-alias ppull="podman pull"
+abbrev-alias ppush="podman push"
+
+# Run
+abbrev-alias pr="podman run"
+abbrev-alias prit="podman run -it --rm"
+
+# Volumes / Networks
+abbrev-alias pv="podman volume"
+abbrev-alias pvls="podman volume ls"
+abbrev-alias pn="podman network"
+abbrev-alias pnls="podman network ls"
+
+# System
+abbrev-alias psp="podman system prune"
+abbrev-alias pspf="podman system prune -af"
+abbrev-alias pinsp="podman inspect"
+
+# Pods
+abbrev-alias ppod="podman pod"
+abbrev-alias ppodls="podman pod ls"
+abbrev-alias ppodps="podman pod ps"
+abbrev-alias ppodrm="podman pod rm"
+
+# Compose
+abbrev-alias pcu="podman compose up"
+abbrev-alias pcud="podman compose up -d"
+abbrev-alias pcd="podman compose down"
+abbrev-alias pcb="podman compose build"
+abbrev-alias pcl="podman compose logs"
+abbrev-alias pclf="podman compose logs -f"
+abbrev-alias pcps="podman compose ps"
+abbrev-alias pcr="podman compose restart"

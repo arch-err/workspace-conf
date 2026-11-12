@@ -1,0 +1,56 @@
+# shellcheck shell=bash
+[[ $- != *i* ]] && return
+BASH_CONF_DIR="$(cd -- "$(dirname -- "$(readlink -f -- "${BASH_SOURCE[0]}")")" && pwd)"
+export EDITOR="${EDITOR:-nvim}"
+export VISUAL="${VISUAL:-$EDITOR}"
+
+# Readline
+export INPUTRC="$BASH_CONF_DIR/inputrc"
+bind -f "$INPUTRC"
+
+# Shell options
+source "$BASH_CONF_DIR/shellopts.bash"
+
+# History
+source "$BASH_CONF_DIR/history.bash"
+
+# Prompt
+source "$BASH_CONF_DIR/prompt.bash"
+
+# Plugins
+source "$BASH_CONF_DIR/plugins/bash-abbrev-alias/abbrev-alias.plugin.bash"
+
+# Aliases
+for __alias_file in "$BASH_CONF_DIR"/aliases/*.alias; do
+    [[ -r "$__alias_file" ]] || continue
+    while IFS= read -r __alias_line || [[ -n "$__alias_line" ]]; do
+        [[ -z "$__alias_line" || "$__alias_line" == \#* ]] && continue
+        if [[ "$__alias_line" =~ ^[[:space:]]*([^=[:space:]]+)[[:space:]]*=[[:space:]]*(.+)$ ]]; then
+            # Substitute the parsed pair now; retain literal variables in its value.
+            # shellcheck disable=SC2139
+            alias "${BASH_REMATCH[1]}"="${BASH_REMATCH[2]}"
+        fi
+    done < "$__alias_file"
+done
+unset __alias_file __alias_line
+
+# Abbreviations
+for __abbr_file in "$BASH_CONF_DIR"/abbr/*.abbr; do
+    [[ -r "$__abbr_file" ]] && source "$__abbr_file"
+done
+unset __abbr_file
+
+# Bash completion framework
+for __bc in /usr/share/bash-completion/bash_completion /etc/bash_completion; do
+    [[ -f "$__bc" ]] && source "$__bc" && break
+done
+# nix store fallback
+if ! declare -F _get_comp_words_by_ref &>/dev/null; then
+    for __bc in /nix/store/*-bash-completion-*/share/bash-completion/bash_completion; do
+        [[ -f "$__bc" ]] && source "$__bc" && break
+    done
+fi
+unset __bc
+
+# Completions
+source "$BASH_CONF_DIR/completions.bash"

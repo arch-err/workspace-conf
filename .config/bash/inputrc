@@ -1,0 +1,17 @@
+# Completion behavior
+set show-all-if-ambiguous on
+set show-all-if-unmodified on
+set completion-ignore-case on
+set menu-complete-display-prefix on
+
+# Coloring
+set colored-stats on
+set colored-completion-prefix on
+set visible-stats on
+
+# Tab cycles through completions
+TAB: menu-complete
+"\e[Z": menu-complete-backward
+
+# Partial completion before cycling
+set skip-completed-text on

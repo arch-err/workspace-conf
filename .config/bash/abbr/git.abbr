@@ -1,0 +1,57 @@
+# Status
+abbrev-alias gs="git status"
+abbrev-alias gss="git status -s"
+
+# Add
+abbrev-alias ga="git add"
+abbrev-alias gaa="git add -A"
+abbrev-alias gap="git add -p"
+
+# Commit
+abbrev-alias gc="git commit"
+abbrev-alias gcm="git commit -m"
+abbrev-alias gca="git commit --amend"
+abbrev-alias gcan="git commit --amend --no-edit"
+
+# Branch
+abbrev-alias gb="git branch"
+abbrev-alias gbd="git branch -d"
+abbrev-alias gbD="git branch -D"
+abbrev-alias gsw="git switch"
+abbrev-alias gswc="git switch -c"
+abbrev-alias gco="git checkout"
+
+# Pull / Push / Fetch
+abbrev-alias gp="git push"
+abbrev-alias gpf="git push --force-with-lease"
+abbrev-alias gpl="git pull"
+abbrev-alias gf="git fetch"
+abbrev-alias gfa="git fetch --all"
+
+# Diff
+abbrev-alias gd="git diff"
+abbrev-alias gds="git diff --staged"
+
+# Log
+abbrev-alias gl="git log --oneline"
+abbrev-alias glo="git log --oneline --graph"
+
+# Rebase / Merge
+abbrev-alias grb="git rebase"
+abbrev-alias grbi="git rebase -i"
+abbrev-alias grbc="git rebase --continue"
+abbrev-alias grba="git rebase --abort"
+abbrev-alias gm="git merge"
+
+# Stash
+abbrev-alias gst="git stash"
+abbrev-alias gstp="git stash pop"
+abbrev-alias gstl="git stash list"
+
+# Reset
+abbrev-alias grh="git reset HEAD"
+abbrev-alias grhh="git reset --hard HEAD"
+
+# Remote
+abbrev-alias gr="git remote"
+abbrev-alias grv="git remote -v"

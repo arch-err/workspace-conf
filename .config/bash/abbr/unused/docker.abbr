@@ -1,0 +1,48 @@
+# Core
+abbrev-alias d="docker"
+abbrev-alias dc="docker compose"
+
+# Containers
+abbrev-alias dps="docker ps"
+abbrev-alias dpsa="docker ps -a"
+abbrev-alias dex="docker exec -it"
+abbrev-alias dl="docker logs"
+abbrev-alias dlf="docker logs -f"
+abbrev-alias dstart="docker start"
+abbrev-alias dstop="docker stop"
+abbrev-alias drm="docker rm"
+abbrev-alias drmf="docker rm -f"
+
+# Images
+abbrev-alias di="docker images"
+abbrev-alias drmi="docker rmi"
+abbrev-alias db="docker build"
+abbrev-alias dbt="docker build -t"
+abbrev-alias dpull="docker pull"
+abbrev-alias dpush="docker push"
+
+# Run
+abbrev-alias dr="docker run"
+abbrev-alias drit="docker run -it --rm"
+
+# Volumes / Networks
+abbrev-alias dv="docker volume"
+abbrev-alias dvls="docker volume ls"
+abbrev-alias dn="docker network"
+abbrev-alias dnls="docker network ls"
+
+# System
+abbrev-alias dsp="docker system prune"
+abbrev-alias dspf="docker system prune -af"
+abbrev-alias dinsp="docker inspect"
+
+# Compose
+abbrev-alias dcu="docker compose up"
+abbrev-alias dcud="docker compose up -d"
+abbrev-alias dcd="docker compose down"
+abbrev-alias dcb="docker compose build"
+abbrev-alias dcl="docker compose logs"
+abbrev-alias dclf="docker compose logs -f"
+abbrev-alias dcps="docker compose ps"
+abbrev-alias dcr="docker compose restart"
+abbrev-alias dcex="docker compose exec"

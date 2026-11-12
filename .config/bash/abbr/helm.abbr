@@ -1,0 +1,44 @@
+# Core
+abbrev-alias h="helm"
+
+# Install / Upgrade / Uninstall
+abbrev-alias hi="helm install"
+abbrev-alias hu="helm upgrade"
+abbrev-alias hui="helm upgrade --install"
+abbrev-alias hun="helm uninstall"
+
+# List / Status / History
+abbrev-alias hls="helm list"
+abbrev-alias hlsa="helm list -A"
+abbrev-alias hs="helm status"
+abbrev-alias hh="helm history"
+
+# Repo
+abbrev-alias hr="helm repo"
+abbrev-alias hra="helm repo add"
+abbrev-alias hru="helm repo update"
+abbrev-alias hrls="helm repo list"
+
+# Search
+abbrev-alias hsr="helm search repo"
+abbrev-alias hsh="helm search hub"
+
+# Chart
+abbrev-alias hc="helm create"
+abbrev-alias hp="helm package"
+abbrev-alias ht="helm template"
+abbrev-alias hlt="helm lint"
+
+# Values / Show
+abbrev-alias hv="helm show values"
+abbrev-alias hsc="helm show chart"
+abbrev-alias hsa="helm show all"
+abbrev-alias hgv="helm get values"
+abbrev-alias hga="helm get all"
+abbrev-alias hgm="helm get manifest"
+
+# Rollback
+abbrev-alias hrb="helm rollback"
+
+# Diff (helm-diff plugin)
+abbrev-alias hd="helm diff upgrade"
